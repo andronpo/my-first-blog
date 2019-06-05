@@ -4,12 +4,15 @@
     </head>
     <body>
         <div>
-            <h1>moi_35mm</h1>
+            <h1><a href="/">moi_35mm</a></h1>
         </div>
+        
+        {%for post in posts %}
         <div>
-            <p>
-                This is text.
-            </p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
     </body>
 </html>
